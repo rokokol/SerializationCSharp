@@ -1,0 +1,11 @@
+{
+  "Name": "Govno",
+  "Goods": [
+    {
+      "Name": "Govno",
+      "Price": 10,
+      "Rating": 1
+    }
+  ],
+  "Workers": []
+}

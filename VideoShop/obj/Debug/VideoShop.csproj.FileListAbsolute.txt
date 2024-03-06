@@ -1,0 +1,6 @@
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\bin\Debug\VideoShop.dll
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\bin\Debug\VideoShop.pdb
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\obj\Debug\VideoShop.csproj.AssemblyReference.cache
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\obj\Debug\VideoShop.csproj.CoreCompileInputs.cache
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\obj\Debug\VideoShop.dll
+C:\Users\Rokoko\RiderProjects\SerializationCSharp\VideoShop\obj\Debug\VideoShop.pdb
