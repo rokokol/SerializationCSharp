@@ -12,9 +12,10 @@ namespace SerializationCSharp
         {
             InitializeComponent();
             Closed += delegate { MainForm.FORM.Show(); };
+            FormClosing += Worlspace_FormClosing;
         }
 
-        private bool desirealizeObject(string path, out object result)
+        private bool DesirealizeObject(string path, out object result)
         {
             try
             {
@@ -66,7 +67,23 @@ namespace SerializationCSharp
 
             return true;
         }
-
+        
+        private void Worlspace_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you sure want to leave?", 
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+        
         private void exitTool_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Do you sure want to leave?", 

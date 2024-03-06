@@ -40,7 +40,7 @@ namespace SerializationCSharp
 
         private void infoButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Powered by Ilyusha");
+            MessageBox.Show("Powered by Ilyusha", "About tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

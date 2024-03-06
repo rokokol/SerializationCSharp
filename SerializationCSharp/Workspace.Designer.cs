@@ -41,14 +41,14 @@ namespace SerializationCSharp
             this.fileTool = new System.Windows.Forms.ToolStripMenuItem();
             this.saveItemTool = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.addShopTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.addWorkerTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.addGoodTool = new System.Windows.Forms.ToolStripMenuItem();
             this.exitTool = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.treeView2 = new System.Windows.Forms.TreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.addShopTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.addWorkerTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.addGoodTool = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -88,15 +88,33 @@ namespace SerializationCSharp
             // saveItemTool
             // 
             this.saveItemTool.Name = "saveItemTool";
-            this.saveItemTool.Size = new System.Drawing.Size(152, 22);
+            this.saveItemTool.Size = new System.Drawing.Size(125, 22);
             this.saveItemTool.Text = "Save Item";
             // 
             // addItemTool
             // 
             this.addItemTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.addShopTool, this.addWorkerTool, this.addGoodTool });
             this.addItemTool.Name = "addItemTool";
-            this.addItemTool.Size = new System.Drawing.Size(152, 22);
+            this.addItemTool.Size = new System.Drawing.Size(125, 22);
             this.addItemTool.Text = "Add Item";
+            // 
+            // addShopTool
+            // 
+            this.addShopTool.Name = "addShopTool";
+            this.addShopTool.Size = new System.Drawing.Size(144, 22);
+            this.addShopTool.Text = "Add a shop";
+            // 
+            // addWorkerTool
+            // 
+            this.addWorkerTool.Name = "addWorkerTool";
+            this.addWorkerTool.Size = new System.Drawing.Size(144, 22);
+            this.addWorkerTool.Text = "Add a worker";
+            // 
+            // addGoodTool
+            // 
+            this.addGoodTool.Name = "addGoodTool";
+            this.addGoodTool.Size = new System.Drawing.Size(144, 22);
+            this.addGoodTool.Text = "Add a good";
             // 
             // exitTool
             // 
@@ -157,24 +175,6 @@ namespace SerializationCSharp
             // 
             this.openFileDialog.FileName = "object";
             this.openFileDialog.Filter = "Xml files(*.xml)|*.xml|JSON files(*.json)|*.json|All files(*.*)|*.*";
-            // 
-            // addShopTool
-            // 
-            this.addShopTool.Name = "addShopTool";
-            this.addShopTool.Size = new System.Drawing.Size(152, 22);
-            this.addShopTool.Text = "Add a shop";
-            // 
-            // addWorkerTool
-            // 
-            this.addWorkerTool.Name = "addWorkerTool";
-            this.addWorkerTool.Size = new System.Drawing.Size(152, 22);
-            this.addWorkerTool.Text = "Add a worker";
-            // 
-            // addGoodTool
-            // 
-            this.addGoodTool.Name = "addGoodTool";
-            this.addGoodTool.Size = new System.Drawing.Size(152, 22);
-            this.addGoodTool.Text = "Add a good";
             // 
             // Workspace
             // 
