@@ -17,8 +17,6 @@ namespace SerializationCSharp
             // {
             //     WriteIndented = true
             // };
-            // Good g = new Good("Govno", 10, 1);
-            // Shop sp = new Shop("Govno", g);
             // File.WriteAllText("../../shop.json", JsonSerializer.Serialize(sp, options));
             // string json = File.ReadAllText("../../Source/shop.json");
             // Worker lol = JsonSerializer.Deserialize<Worker>(json);
