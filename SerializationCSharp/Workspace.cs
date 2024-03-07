@@ -43,7 +43,7 @@ namespace SerializationCSharp
                         "Unknown file extensoin",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
-                    
+
                     result = default;
                     return false;
                 }
@@ -68,6 +68,13 @@ namespace SerializationCSharp
             {
                 MessageBox.Show(e.Message,
                     "XML Exception",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            catch (InvalidOperationException e)
+            {
+                MessageBox.Show(e.Message,
+                    "Invalid operation",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
