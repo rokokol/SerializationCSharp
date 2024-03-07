@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Goods />
+  <Workers />
+  <Name>XShop</Name>
+  <Price>212121212</Price>
+  <Rating>4</Rating>
+</Shop>

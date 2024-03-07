@@ -39,15 +39,14 @@ namespace SerializationCSharp
             this.picture = new System.Windows.Forms.PictureBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileTool = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveItemTool = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemTool = new System.Windows.Forms.ToolStripMenuItem();
             this.addShopTool = new System.Windows.Forms.ToolStripMenuItem();
             this.addWorkerTool = new System.Windows.Forms.ToolStripMenuItem();
             this.addGoodTool = new System.Windows.Forms.ToolStripMenuItem();
             this.exitTool = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.treeView2 = new System.Windows.Forms.TreeView();
+            this.categories = new System.Windows.Forms.TreeView();
+            this.contentView = new System.Windows.Forms.TreeView();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.menuStrip.SuspendLayout();
@@ -80,41 +79,41 @@ namespace SerializationCSharp
             // 
             // fileTool
             // 
-            this.fileTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.saveItemTool, this.addItemTool });
+            this.fileTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.addItemTool });
             this.fileTool.Name = "fileTool";
             this.fileTool.Size = new System.Drawing.Size(37, 20);
             this.fileTool.Text = "File";
-            // 
-            // saveItemTool
-            // 
-            this.saveItemTool.Name = "saveItemTool";
-            this.saveItemTool.Size = new System.Drawing.Size(125, 22);
-            this.saveItemTool.Text = "Save Item";
             // 
             // addItemTool
             // 
             this.addItemTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.addShopTool, this.addWorkerTool, this.addGoodTool });
             this.addItemTool.Name = "addItemTool";
-            this.addItemTool.Size = new System.Drawing.Size(125, 22);
+            this.addItemTool.Size = new System.Drawing.Size(123, 22);
             this.addItemTool.Text = "Add Item";
             // 
             // addShopTool
             // 
             this.addShopTool.Name = "addShopTool";
-            this.addShopTool.Size = new System.Drawing.Size(144, 22);
+            this.addShopTool.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.addShopTool.Size = new System.Drawing.Size(189, 22);
             this.addShopTool.Text = "Add a shop";
+            this.addShopTool.Click += new System.EventHandler(this.addShopTool_Click);
             // 
             // addWorkerTool
             // 
             this.addWorkerTool.Name = "addWorkerTool";
-            this.addWorkerTool.Size = new System.Drawing.Size(144, 22);
+            this.addWorkerTool.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.addWorkerTool.Size = new System.Drawing.Size(189, 22);
             this.addWorkerTool.Text = "Add a worker";
+            this.addWorkerTool.Click += new System.EventHandler(this.addWorkerTool_Click);
             // 
             // addGoodTool
             // 
             this.addGoodTool.Name = "addGoodTool";
-            this.addGoodTool.Size = new System.Drawing.Size(144, 22);
+            this.addGoodTool.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.addGoodTool.Size = new System.Drawing.Size(189, 22);
             this.addGoodTool.Text = "Add a good";
+            this.addGoodTool.Click += new System.EventHandler(this.addGoodTool_Click);
             // 
             // exitTool
             // 
@@ -132,49 +131,49 @@ namespace SerializationCSharp
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+            this.splitContainer1.Panel1.Controls.Add(this.categories);
             this.splitContainer1.Panel1.Controls.Add(this.picture);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.treeView2);
+            this.splitContainer1.Panel2.Controls.Add(this.contentView);
             this.splitContainer1.Size = new System.Drawing.Size(800, 425);
             this.splitContainer1.SplitterDistance = 171;
             this.splitContainer1.TabIndex = 2;
             // 
-            // treeView1
+            // categories
             // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.treeView1.Location = new System.Drawing.Point(12, 141);
-            this.treeView1.Name = "treeView1";
+            this.categories.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.categories.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.categories.Location = new System.Drawing.Point(12, 141);
+            this.categories.Name = "categories";
             treeNode1.Name = "Shops";
             treeNode1.Text = "Shops";
             treeNode2.Name = "Workers";
             treeNode2.Text = "Workers";
             treeNode3.Name = "Goods";
             treeNode3.Text = "Goods";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode1, treeNode2, treeNode3 });
-            this.treeView1.Size = new System.Drawing.Size(144, 272);
-            this.treeView1.TabIndex = 1;
+            this.categories.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode1, treeNode2, treeNode3 });
+            this.categories.Size = new System.Drawing.Size(144, 272);
+            this.categories.TabIndex = 1;
             // 
-            // treeView2
+            // contentView
             // 
-            this.treeView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView2.ItemHeight = 16;
-            this.treeView2.Location = new System.Drawing.Point(13, 13);
-            this.treeView2.Name = "treeView2";
+            this.contentView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentView.ItemHeight = 16;
+            this.contentView.Location = new System.Drawing.Point(13, 13);
+            this.contentView.Name = "contentView";
             treeNode4.Name = "Content";
             treeNode4.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             treeNode4.Text = "Content";
-            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode4 });
-            this.treeView2.Size = new System.Drawing.Size(600, 400);
-            this.treeView2.TabIndex = 0;
+            this.contentView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] { treeNode4 });
+            this.contentView.Size = new System.Drawing.Size(600, 400);
+            this.contentView.TabIndex = 0;
             // 
             // openFileDialog
             // 
             this.openFileDialog.FileName = "object";
-            this.openFileDialog.Filter = "Xml files(*.xml)|*.xml|JSON files(*.json)|*.json|All files(*.*)|*.*";
+            this.openFileDialog.Filter = "XML files(*.xml)|*.xml|JSON files(*.jsn)|*.jsn|JSON files(*.json)|*.json|All file" + "s(*.*)|*.*";
             // 
             // Workspace
             // 
@@ -204,12 +203,11 @@ namespace SerializationCSharp
 
         private System.Windows.Forms.OpenFileDialog openFileDialog;
 
-        private System.Windows.Forms.TreeView treeView2;
+        private System.Windows.Forms.TreeView contentView;
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView categories;
 
         private System.Windows.Forms.ToolStripMenuItem fileTool;
-        private System.Windows.Forms.ToolStripMenuItem saveItemTool;
         private System.Windows.Forms.ToolStripMenuItem addItemTool;
         private System.Windows.Forms.ToolStripMenuItem exitTool;
 

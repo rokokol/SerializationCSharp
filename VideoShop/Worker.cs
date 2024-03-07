@@ -5,7 +5,10 @@ namespace VideoShop
     [Serializable]
     public class Worker
     {
-        public string Name { get; private set; }
+        public string Name { get; set; }
+        public decimal Salary { get; set; }
+        public uint Iq { get; set; } 
+        public bool IsSingle { get; set; }
 
         public void Eat()
         {
@@ -44,10 +47,22 @@ namespace VideoShop
             }
             return Name;
         }
-        
-        public Worker(string name)
+
+        public override string ToString()
+        {
+            return $"{nameof(Name)}: {Name}, {nameof(Salary)}: {Salary}, {nameof(Iq)}: {Iq}, {nameof(IsSingle)}: {IsSingle}";
+        }
+
+        public Worker(string name, decimal salary, uint iq, bool isSingle)
         {
             Name = name;
+            Salary = salary > 0 ? salary : 10;
+            Iq = iq;
+            IsSingle = isSingle;
+        }
+
+        public Worker()
+        {
         }
     }
 }

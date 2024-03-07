@@ -119,8 +119,14 @@
         <None Include="App.config"/>
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Source\shop.json" />
-      <Content Include="Source\wideTree.jpg" />
+      <Content Include="Source\testJsnGood.jsn" />
+      <Content Include="Source\testJsonGood.json" />
+      <Content Include="Source\testJsonShop.json" />
+      <Content Include="Source\testJsonWorker.json" />
+      <Content Include="Source\testXmlGood.xml" />
+      <Content Include="Source\testXmlShop.xml" />
+      <Content Include="Source\testXmlShopWithItems.xml" />
+      <Content Include="Source\testXmlWorker.xml" />
       <Content Include="Source\tree.ico" />
     </ItemGroup>
     <ItemGroup>

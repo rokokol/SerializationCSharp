@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Worker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Victoria</Name>
+  <Salary>22000</Salary>
+  <Iq>120</Iq>
+  <IsSingle>false</IsSingle>
+</Worker>

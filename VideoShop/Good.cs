@@ -5,9 +5,9 @@ namespace VideoShop
     [Serializable]
     public class Good
     {
-        public string Name { get; private set; }
-        public decimal Price { get; private set; }
-        public uint Rating { get; private set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public uint Rating { get; set; }
 
         public void Do()
         {
@@ -25,7 +25,12 @@ namespace VideoShop
                 Break();
             }
         }
-        
+
+        public override string ToString()
+        {
+            return $"{Name}: {Rating}/5 - {Price:2c}";  
+        }
+
         public void Exsist()
         {
             void Crumble()
@@ -63,6 +68,10 @@ namespace VideoShop
             {
                 Rating = 2;
             }
+        }
+
+        public Good()
+        {
         }
     }
 }
